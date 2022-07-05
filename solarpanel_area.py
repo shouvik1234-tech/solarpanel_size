@@ -22,17 +22,17 @@ def areaofsolarpanel_required(Totalpower_required,phi,eta_ofpvcells,loss_efficie
 
 
 power_eclipse_EOL=float(input("enter the power required by cubsat in watt during eclipse period in EOL:")) #EOL-end of life
-degradation_peryear=float(input("enter the degradation of solar array per year in %:"))
+degradation_peryear=float(input("enter the degradation of solar array per year in %:"))  #2.7% per year
 flight_period=float(input("enter the total time of flight of the cubsat in years:"))
 power_eclipse_BOL=power_eclipse_EOL/(1-(degradation_peryear*0.01))**flight_period #BOL-beginning of life
 Tecl=float(input("enter the eclipse period in min:"))
 Torbit=float(input("enter the orbital period:"))
 Tsun=Torbit-Tecl
-eta_charge=float(input("enter the charging efficiency:"))
-eta_discharge=float(input("enter the discharging efficiency:"))
+eta_charge=float(input("enter the charging efficiency:"))  #100%
+eta_discharge=float(input("enter the discharging efficiency:"))  #94% for battery temp less than 15 degree celcius
 theta=float(input("enter the angle of incident of sunray on solarpanel in degrees:"))
-eta_ofpvcells=float(input("enter the effiency of pvcells:"))
-other_losses=float(input("enter the loss of efficiency by other reasons:"))
+eta_ofpvcells=float(input("enter the effiency of pvcells:"))   #30%
+other_losses=float(input("enter the loss of efficiency by other reasons:")) #5 to 10 %
 phi=1370  #in watts/m^2
 
 
